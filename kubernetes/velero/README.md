@@ -16,9 +16,9 @@ terraform apply # (yes)
 velero install \
   --provider aws \
   --plugins velero/velero-plugin-for-aws:v1.3.0 \
-  --bucket ${YOUR_BUCKER_NAME} \
-  --backup-location-config region=${YOUR-BUCKER_REGION} \
-  --snapshot-location-config region=${YOUR-BUCKER_REGION} \
+  --bucket ${YOUR_BUCKET_NAME} \
+  --backup-location-config region=${YOUR_BUCKET_REGION} \
+  --snapshot-location-config region=${YOUR_BUCKET_REGION} \
   --secret-file ${YOUR_AWS_CREDENTIALS_PATH} \
   --velero-pod-cpu-limit 2 \
   --velero-pod-mem-limit 4G
