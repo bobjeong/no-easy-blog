@@ -1,9 +1,14 @@
 
 ## Create Iam User Velero
 ```
-terraform init //terraform verion 1.1.1
+# terraform verion 1.1.1
+terraform init
 
-// create velero user credential path is .
+terraform plan
+
+terraform apply # (yes)
+
+# create velero user credential path is .
 ```
 
 ## Create Velero Kubernetes Resource
@@ -27,4 +32,12 @@ velero backup create ${BACKUP_DIRECTORY_NAME} --include-namespaces ${BACKUP_NAME
 ## Restore
 ```
 velero restore create ${RESTORE_DIRECTORY_NAME} --from-backup ${BACKUP_DIRECTORY_NAME}
+```
+
+
+## Delete
+```
+terraform destroy # (yes)
+
+velero uninstall
 ```
